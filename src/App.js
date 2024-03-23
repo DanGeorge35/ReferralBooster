@@ -6,9 +6,9 @@ import Contact from "./pages/contact";
 import NoPage from "./pages/404";
 import About from "./pages/about";
 import Reservation from "./pages/reservation";
-import Investment from "./pages/invest";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
+import Login from "./pages/login";
 
 class App extends Component {
   constructor(props) {
@@ -31,10 +31,10 @@ class App extends Component {
               path="/reservation"
               element={<Reservation BASEURL={BASEURL} />}
             />
-            <Route path="/invest" element={<Investment BASEURL={BASEURL} />} />
+
             <Route path="/privacy" element={<Privacy BASEURL={BASEURL} />} />
             <Route path="/terms" element={<Terms BASEURL={BASEURL} />} />
-
+            <Route path="/login" element={<Login BASEURL={BASEURL} />} />
             <Route path="*" element={<NoPage BASEURL={BASEURL} />} />
           </Routes>
         </Router>

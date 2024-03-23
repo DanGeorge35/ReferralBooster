@@ -7,35 +7,22 @@ class Navs extends Component {
     return (
       <div className="">
         <nav
-          className="navbar navbar-expand-lg  border-2 border-warning fixed-top p-1 "
+          className="navbar-expand-lg  fixed-top p-1 "
           style={{
-            backgroundColor: "#eee",
+            backgroundColor: "#000",
           }}
         >
-          <div className="container" style={{ height: "73px", width: "100vw" }}>
+          <div
+            className="container text-center"
+            style={{ height: "73px", width: "100vw" }}
+          >
             <a
               className="navbar-brand p-0 "
               href="#"
               style={{ outline: "none" }}
             >
-              <img
-                src="https://cadencepub.com/icon.jpg"
-                alt="Cadence"
-                style={{ height: "70px" }}
-              />
+              <img src="logo.png" alt="Cadence" style={{ height: "70px" }} />
             </a>
-
-            <div
-              className="navbar-collapse  collapse d-none d-none-md d-block-lg"
-              id="navbarSupportedContent"
-            ></div>
-
-            <span
-              className="navbar-toggler   d-block d-lg-none "
-              onClick={this.props.toggleSideMenu}
-            >
-              <span className="material-symbols-outlined ">lunch_dining</span>
-            </span>
           </div>
         </nav>
       </div>
