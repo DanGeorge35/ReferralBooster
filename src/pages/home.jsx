@@ -37,7 +37,6 @@ class Home extends Component {
             toggleModal={this.toggleModal}
             content={<Form toggleModal={this.toggleModal} />}
           />
-          <Footer />
         </div>
       );
     } else {
@@ -49,8 +48,7 @@ class Home extends Component {
               <div
                 className="col-lg-5 "
                 style={{
-                  backgroundImage:
-                    "url(https://img.freepik.com/free-vector/refer-friend-concept-illustration_114360-7039.jpg?t=st=1710496243~exp=1710499843~hmac=82d58667ecb89f824c8b59326b6fa99dd1d22dd2e85c412b6684fdbaa32bf422&w=996)",
+                  backgroundImage: "url(/refer.jpg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                   minHeight: "370px",
