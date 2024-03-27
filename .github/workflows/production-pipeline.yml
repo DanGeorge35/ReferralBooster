@@ -24,4 +24,5 @@ jobs:
             git pull
             npm install
             npm run build
-            cp -rf ~/ReferralBooster/build ~/public_html/earn.cadencepub.com
+            rm -rf ~/public_html/earn.cadencepub.com/*
+            cp -rf ~/ReferralBooster/build/* ~/public_html/earn.cadencepub.com
