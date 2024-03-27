@@ -1,0 +1,27 @@
+name: Production CI/CD
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  CD:
+    name: Deploying to Production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: matheusvanzan/sshpass-action@v2
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          pass: ${{ secrets.PASS }}
+          key: ${{ secrets.PRIVATE }}
+          run: |
+            cd ReferralBooster/
+            touch ~/.bash_profile
+            git pull
+            npm install
+            npm run build
+            cp -rf ~/ReferralBooster/build ~/public_html/earn.cadencepub.com
